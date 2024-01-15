@@ -1,1 +1,1 @@
-heroku buildpacks:set heroku/php
+web: heroku-php-apache2 web/
