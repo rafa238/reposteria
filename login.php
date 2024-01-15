@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +12,7 @@
     <div class="login-container">
         <h1>Bienvenido a Azucar y Crema</h1>
         <?php 
-            session_start();
+            
             if (isset($_SESSION['id'])) {
                 header("Location: ./alumnos/dashboard_alumnos.php");
                 exit;

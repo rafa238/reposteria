@@ -1,11 +1,14 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include("./db.php");
 if (isset($_SESSION['id'])) {
     header("Location: ./alumnos/dashboard_alumnos.php");
     exit;
 }
 
-session_start();
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];

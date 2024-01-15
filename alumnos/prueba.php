@@ -1,3 +1,4 @@
+<?php include("../db.php") ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,8 +12,7 @@
 </head>
 <body>
     <div class="dashboard-container">
-        <?php include("./aside.php") ?>
-
+        <?php include("aside.php") ?>
         <main class="main-content">
             <header class="main-header">
                 <h2>Examen de aprobacion</h2>

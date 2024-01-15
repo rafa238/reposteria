@@ -1,3 +1,4 @@
+<?php include("../db.php") ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -58,7 +59,6 @@
             </div>
             <div class="content">
                 <?php 
-                    include("../db.php");
                     $name = "";
                     $email = "";
                     $idProfesor = "";

@@ -1,3 +1,4 @@
+<?php include("../db.php") ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -56,7 +57,7 @@
                     <p> Agregar Grupo </p>
                 </a>
             </div>
-            <?php include("../db.php") ?>
+            
             <?php 
                 if(!isset($_GET['id_grupo'])) {
                     header("Location: ./grupos.php");
@@ -70,6 +71,7 @@
                     $profesor = $row['profesor_idprofesor'];
                 } else {
                     header("Location: ./grupos.php");
+                    exit;
                 }
             ?>
             <div class="content">
@@ -99,7 +101,7 @@
                         <?php } ?>
                         </select>
                     </div>
-                    <button type="submit" name="update_grupo" class="btn">Agregar grupo</button>
+                    <button type="submit" name="update_grupo" class="btn">Actualizar grupo</button>
                 </form>
 
                 <h2>Edita la informacion de los estudiantes</h2>

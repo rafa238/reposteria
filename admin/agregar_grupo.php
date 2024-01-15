@@ -1,3 +1,4 @@
+<?php include("../db.php") ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -65,7 +66,6 @@
                     <div class="forms__group">
                         <label for="profesor">Profesor:</label>
                         <select id="profesor" name="profesor">
-                        <?php include("../db.php") ?>
                         <?php 
                             $query ="SELECT * FROM profesor";
                             $result = mysqli_query($conn, $query);

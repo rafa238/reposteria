@@ -1,3 +1,4 @@
+<?php include("../db.php") ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +11,6 @@
     <title>AyC | Kardex</title>
 </head>
 <body>
-    <?php include("../db.php")?>
     <div class="dashboard-container">
         <?php include("./aside.php") ?>
 

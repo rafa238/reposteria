@@ -1,3 +1,7 @@
+<?php
+    include("../check_login.php");
+    $username = $_SESSION['username'];
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,10 +23,7 @@
 
             <div class="content">
                 <img src="../logo.png" alt="Logo Pastelería">
-                <?php
-                    include("../check_login.php");
-                    $username = $_SESSION['username'];
-                ?>
+                
                 <p>Bienvenido al Dashboard <?php echo $username ?> </p>
             </div>
         </main>

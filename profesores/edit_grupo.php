@@ -1,3 +1,4 @@
+<?php include("../db.php") ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,7 +25,6 @@
                     <p> Listar Grupo </p>
                 </a>
             </div>
-            <?php include("../db.php") ?>
             <?php 
                 if(!isset($_GET['id_grupo'])) {
                     header("Location: ./grupos.php");
@@ -38,6 +38,7 @@
                     $profesor = $row['profesor_idprofesor'];
                 } else {
                     header("Location: ./grupos.php");
+                    exit;
                 }
             ?>
             <div class="content">

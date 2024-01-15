@@ -1,3 +1,4 @@
+<?php include("../db.php") ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -33,7 +34,6 @@
                         </thead>
                     <tbody>
                     <?php
-                        include("../db.php");  
                         $nivel = $_GET["nivel"];
                         $id = $_GET["idalumno"];
                         $query ="

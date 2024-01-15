@@ -1,3 +1,4 @@
+<?php include("../db.php")?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +11,6 @@
     <title>AyC | Lista alumno</title>
 </head>
 <body>
-    <?php include("../db.php")?>
     <div class="dashboard-container">
         <aside class="dashboard__aside">
             <h2 class="dashboard__aside_title">Menú</h2>
