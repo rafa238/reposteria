@@ -86,10 +86,10 @@
                                         <a class="btn" href="<?php echo $row["contenido"] ?>">
                                             Ver
                                         </a>
-                                        <a class="btn" href="#">
+                                        <a class="btn" href="./agregar_materia.php?edit=true&idmateria=<?php echo $row['idmateria'] ?>">
                                             Editar
                                         </a>
-                                        <a class="btn" href="#">
+                                        <a class="btn" href="./actions/save_materia.php?delete=true&idmateria=<?php echo $row['idmateria'] ?>">
                                             Eliminar
                                         </a>
                                     </td>   

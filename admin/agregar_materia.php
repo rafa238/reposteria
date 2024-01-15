@@ -1,3 +1,4 @@
+<?php include("../db.php") ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -63,23 +64,46 @@
             </div>
             <div class="content">
                 <form action="./actions/save_materia.php" class="forms" method="POST">
+                    <?php 
+                        $name = "";
+                        $creditos = "";
+                        $nivel = "";
+                        $idmateria = "";
+                        $contenido = "";
+                        if(isset($_GET['edit'])) {
+                            $idmateria = $_GET['idmateria'];
+                            $query = "SELECT * FROM materia WHERE idmateria = $idmateria";
+                            $result = mysqli_query($conn, $query);
+                            $row = mysqli_fetch_array($result);
+                            $idmateria = $row['idmateria'];
+                            $name = $row['nombre'];
+                            $creditos = $row['creditos'];
+                            $nivel = $row['nivel'];
+                            $contenido = $row['contenido'];
+                        }
+                    ?>
+                    <input type="hidden" name="idmateria" value="<?php echo $row['idmateria'] ?>" />
                     <div class="forms__group">
                         <label for="username">Ingresa el nombre:</label>
-                        <input type="text" id="username" name="name" class="field" required>     
+                        <input type="text" id="username" name="name" class="field" required
+                        value="<?php echo $name ?>">     
                     </div>
                     <div class="forms__group">
                         <label for="creditos">Ingresa el creditos:</label>
-                        <input type="number" id="creditos" name="creditos" class="field" required>     
+                        <input type="number" id="creditos" name="creditos" class="field" required
+                        value="<?php echo $creditos ?>">     
                     </div>
                     <div class="forms__group">
                         <label for="nivel">Ingresa el nivel:</label>
-                        <input type="number" id="nivel" name="nivel" class="field" required>     
+                        <input type="number" id="nivel" name="nivel" class="field" required
+                        value="<?php echo $nivel ?>">     
                     </div>
                     <div class="forms__group">
                         <label for="contenido">Ingresa el link al contenido del programa:</label>
-                        <input type="text" id="contenido" name="contenido" class="field" required>     
+                        <input type="text" id="contenido" name="contenido" class="field" required
+                        value="<?php echo $contenido ?>">     
                     </div>
-                    <button type="submit" class="btn" name="save_materia" >Agregar grupo</button>
+                    <button type="submit" class="btn" name="<?php echo (isset($_GET['edit'])) ? "edit_materia" : "save_materia" ?>" >Agregar materia</button>
                 </form>
             </div>
         </main>
