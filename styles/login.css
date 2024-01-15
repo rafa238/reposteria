@@ -1,0 +1,50 @@
+
+.container {
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #f0e6d6;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    color: #6d4c41;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+}
+
+label {
+    margin-bottom: 0.375rem;
+    color: #6d4c41;
+    margin: 1rem;
+}
+
+.btn {
+    padding: 1rem;
+    margin: 2rem;
+    background-color: #ffc8dd;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.field {
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 0.0625rem solid #6d4c41;
+    outline: none;
+    transition: border-bottom 0.3s ease;
+}

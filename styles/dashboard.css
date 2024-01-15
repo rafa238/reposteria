@@ -1,0 +1,152 @@
+.dashboard-container {
+    display: flex;
+}
+
+.dashboard__aside {
+    position: fixed;
+    background-color: #f59989;
+    color: #fff;
+    padding: 1rem;
+    min-width: 20rem;
+    padding-right: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard__aside h2 {
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 3rem;
+    margin: auto;
+}
+
+.dashboard__aside  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+    height: 90%;
+}
+
+
+.dashboard__aside img {
+    width: 3rem;
+    height: 3rem;
+    filter: invert(100%);
+}
+
+.dashboard__aside a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom-left-radius:  2rem;
+    border-start-start-radius: 2rem;
+    padding: 1rem;
+    font-size: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dashboard__aside a:hover {
+    background-color: #e57360;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 1rem;
+    margin-left: 20rem;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 1rem;
+}
+
+.main-header h2 {
+    font-size: 4rem;
+}
+
+.main-header img {
+    width: 10rem; 
+    height: auto;
+}
+
+.content {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content h2 {
+    font-size: 4rem;
+}
+
+.content img {
+    width: 20rem;
+    height: 20rem;
+}
+
+.content > p {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.btn {
+    padding: 1rem;
+    margin: 2rem;
+    background-color: #fab1cd;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: white;
+}
+
+.main__options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.main__options a{
+    text-decoration: none;
+    color: white;
+    background-color: #e57360;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.active {
+    background-color: #e57360;
+}
+
+.main__options p {
+    display: inline;
+    padding-left: 1rem;
+    font-size: 2rem;
+    margin: auto;
+}
+
+.main__options img {
+    width: 3rem;
+    height: 3rem;
+    filter: invert(100%);
+}

@@ -1,0 +1,45 @@
+.field {
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 0.06rem solid #6d4c41;
+    outline: none;
+    transition: border-bottom 0.3s ease;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 1.25rem;
+    font-size: 1.5rem;
+}
+
+.forms button {
+    display: block;
+}
+
+.forms__group {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+}
+
+.forms__group label {
+    display: block;
+    width: 20rem;
+}
+
+.forms__group input[type="text"] {
+    width: 20rem;
+}
+
+.forms__group select {
+    border-radius: 1rem;
+    width: 10rem;
+}
+
+label {
+    margin-bottom: 0.375rem;
+    color: #6d4c41;
+    margin: 1rem;
+}

@@ -1,0 +1,29 @@
+.signatures {
+    width: 100%;
+    padding: 3rem;
+    border-collapse: separate;
+    width: 100%;
+    font-size: 1.5rem;
+    border-spacing: 0 4rem; 
+}
+
+
+.semester_delimiter {
+    border-bottom: 2px solid #9c9c9c;
+    text-align: center;
+    padding: 1.3rem;
+    font-weight: bold;
+}
+
+td, th{
+    padding: 0.8rem;
+    text-align: left;
+}
+
+tr {
+    padding: 4rem;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
