@@ -39,6 +39,12 @@
                         Profesores
                     </a>
                 </li>
+                <li>
+                    <a href="../login.php">
+                        <img src="../images/icons/profesor.png" />
+                        Logout
+                    </a>
+                </li>
             </ul>
         </aside>
 

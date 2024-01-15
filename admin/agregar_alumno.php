@@ -1,3 +1,4 @@
+<?php include("../db.php") ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -62,21 +63,41 @@
                     <p> Agregar Alumno </p>
                 </a>
             </div>
+            <?php 
+                $name = "";
+                $email = "";
+                $nivel = "";
+                $idAlumno = "";
+                if(isset($_GET['edit'])) {
+                    $idAlumno = $_GET['idalumno'];
+                    $query = "SELECT * FROM alumno WHERE idalumno = $idAlumno";
+                    $result = mysqli_query($conn, $query);
+                    $row = mysqli_fetch_array($result);
+                    $idAlumno = $row['idalumno'];
+                    $name = $row['nombre'];
+                    $email = $row['correo'];
+                    $nivel = $row['nivel'];
+                }
+            ?>
             <div class="content">
                 <form action="./actions/add_alumno.php" class="forms" method="POST">
+                    <input type="hidden" value="<?php echo $idAlumno ?>" name="idalumno" />
                     <div class="forms__group">
                         <label for="username">Ingresa el nombre:</label>
-                        <input type="text" id="username" name="name" class="field" required>     
+                        <input type="text" id="username" name="name" class="field" required
+                        value="<?php echo $name?>">     
                     </div>
                     <div class="forms__group">
                         <label for="email">Ingresa el correo:</label>
-                        <input type="email" id="email" name="email" class="field" required>     
+                        <input type="email" id="email" name="email" class="field" required
+                            value="<?php echo $email ?>">     
                     </div>
                     <div class="forms__group">
                         <label for="nivel">Ingresa el nivel:</label>
-                        <input type="text" id="nivel" name="nivel" class="field" required>     
+                        <input type="text" id="nivel" name="nivel" class="field" required
+                        value="<?php echo $nivel ?>">     
                     </div>
-                    <button type="submit" name="save_alumno" class="btn">Agregar nivel</button>
+                    <button type="submit" name="<?php echo (isset($_GET['edit'])) ? "edit_alumno" : "save_alumno" ?>" class="btn">Enviar</button>
                 </form>
             </div>
         </main>

@@ -39,6 +39,12 @@
                         Profesores
                     </a>
                 </li>
+                <li>
+                    <a href="../login.php">
+                        <img src="../images/icons/profesor.png" />
+                        Logout
+                    </a>
+                </li>
             </ul>
         </aside>
 
@@ -75,10 +81,10 @@
                                 <td class="sign_data"> <?php echo $row['nombre'] ?> </td>
                                 <td class="sign_data"> <?php echo $row['correo'] ?> </td>
                                 <td class="sign_data">
-                                    <a class="btn" href="#">
+                                    <a class="btn" href="./agregar_alumno.php?edit=true&idalumno=<?php echo $row['idalumno'] ?>">
                                         Editar
                                     </a>
-                                    <a class="btn" href="#">
+                                    <a class="btn" href="./actions/add_alumno.php?delete=true&idalumno=<?php echo $row['idalumno'] ?>">
                                         Eliminar
                                     </a>
                                 </td>
