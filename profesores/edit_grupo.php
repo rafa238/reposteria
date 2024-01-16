@@ -69,7 +69,7 @@
                             <td class="sign_data"> <?php echo $row['nombre']  ?></td>
                             <td class="sign_data"> <?php echo $row['calificacion']  ?> </td>
                             <td class="sign_data">
-                                <a class="btn" href="#">
+                                <a class="btn" href="./calificar.php?idalumno=<?php echo $row['idalumno'] ?>">
                                     Editar
                                 </a>
                                 <a class="btn" 
